@@ -219,3 +219,6 @@ v 브록으로 지정후 zf 를 입력하면 폴딩(감추기)
 | html  |<!-- vi:set ts=8 sts=2 sw=2: --> |
 | C     |/* vi:set ts=8 sts=8 sw=8: */    |
 | pthon |# vi:set ts=8 sts=2 sw=2:        |
+
+### 복사시 형식 유지
+:set paste -> ctrl+sh+v -> :set nopaste

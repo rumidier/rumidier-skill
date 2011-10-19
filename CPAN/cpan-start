@@ -1,0 +1,20 @@
+hiscpan perlbrew 없을시
+사용자 권한이 없을때
+
+.cpan/CPAN/MyConfig.pm 파일 수정
+'makepl_arg' => q[PREFIX=/home/xxx/yyy],
+'mbuildpl_arg' => q[install_base=/home/xxx/yyy],
+
+경로 지정 에 대해서 읽어 볼것
+perldoc lib
+perldoc perlrun (-I 랑 PERL5LIB검색)
+perldoc perlfaq8 (PERL5LIB)
+perldoc CPAN (MyConfig)
+@INC잡아 주는듯..
+BEGIN{@INC...}
+
+sudo cpan 하면 root 권한으로 그냥 설치
+
+
+
+이런거 안해주고 perlbrew 설치시 편하게 사용 가능
