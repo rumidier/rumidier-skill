@@ -112,3 +112,11 @@ origin master 를 붙여 보자
 =>계속 origin master 를 쓰기 귀찮다면
     $ git branch --set-upstream master origin
 이제 git push 와 git pull 만 써도 잘 되는가?
+
+git 단축키 지정하기
+
+    git config --global alias.st status
+    git config --global alias.co checkout
+    git config --global alias.br branch
+    git config --global alias.cm commit
+    git config -l (단축키 확인) ->> vi ~/.gitconfig

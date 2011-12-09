@@ -42,3 +42,7 @@ webtoon:
     tal:
       code: 316911
       image: http://imgcomic.naver.com/webtoon/316911/thumbnail/title_thumbnail_20110331153319_t125x101.jpg
+---
+- foo
+- bar
+- baz
