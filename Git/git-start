@@ -120,3 +120,7 @@ git 단축키 지정하기
     git config --global alias.br branch
     git config --global alias.cm commit
     git config -l (단축키 확인) ->> vi ~/.gitconfig
+
+git tag 정보 가져오기
+git tag
+git archive --format=tar --prefix=Best/ v0.0.3 > Best.0.0.3.tar
