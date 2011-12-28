@@ -15,6 +15,8 @@ BEGIN{@INC...}
 
 sudo cpan 하면 root 권한으로 그냥 설치
 
-
-
 이런거 안해주고 perlbrew 설치시 편하게 사용 가능
+
+perl -MData::Dumper -E 'my $id = shift; say "-------$id---------"; while (my @ent = getgrent()) { @users = split " ", $ent[-1]; if ($id ~~ @users) { say "$ent[0] : ", join ",", @users  } }' keedi
+
+Data::Dumper모듈을 사용하고  ' 안에 코드를 작성 ' keedi는 인자
