@@ -1,0 +1,105 @@
+1. perlbrew 설치(최우선),tree, nautilus-open-terminal , gitflow
+  pidgin(pidgin-nateon 신버전 찾아서)설치
+  pmtools 설치
+
+2. vim.tar, fonts.tar (N드라이브 설치)
+  tar xvzf vim.tar, fonts.tar 후
+  vim, curl, git 설치
+
+ 3. git bash completion 
+####################
+# PS1
+#
+
+function find-perl-module-use() {
+    dir=${1:-lib};
+    ack '^\s*use\s+.*;\s*$' $dir | \
+    awk '{ print $2 }' | \
+    sed 's/();\?$\|;$//' | \
+    sort | uniq;
+    ack '^\s*use\s+base\s+.*;\s*$' $dir | \
+    awk '{ print $3 }' | \
+    sed 's/();\?$\|;$//' | sort | uniq;
+}
+
+function pmvi { $GIT_EDITOR `perldoc -l $1`; }
+function pmcd { PMPATH=`perldoc -l $1`; cd `dirname $PMPATH`; }
+
+c_cyan=`tput setaf 6`
+c_red=`tput setaf 1`
+c_green=`tput setaf 2`
+c_sgr0=`tput sgr0`
+ 
+parse_git_branch ()
+{
+   if git rev-parse --git-dir >/dev/null 2>&1
+   then
+      gitver=$(git branch 2>/dev/null| sed -n '/^\*/s/^\* //p')
+   else
+      return 0
+   fi
+   echo -e " <$gitver>"
+}
+ 
+branch_color ()
+{
+   if git rev-parse --git-dir >/dev/null 2>&1
+   then
+      color=""
+      if git diff --quiet 2>/dev/null >&2
+      then
+         color="${c_green}"
+      else
+         color=${c_red}
+      fi
+   else
+      return 0
+   fi
+   echo -ne $color
+}
+ 
+PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$\[$(branch_color)\]$(parse_git_branch)\[${c_sgr0}\] '
+########################
+
+4. cpan 북마크
+Ctrl + B
+북마크 도구 모음 추가 - 북마크 추가
+이름 : 북마크 이름 등록
+주소 : https://metacpan.org/search?q=%s
+키워드 : cpan
+
+cpan을 키워드로 뛰어쓰기 이후에는 %s에 문장으로 들어간다
+#################
+
+5. BestWeb
+#
+# Best
+#
+export DB_NAME="t_best";
+export DB_USER='root';
+export DB_PASSWORD="rumidier";
+export GOOGLE_EMAIL="rumidier@gmail.com";
+export GOOGLE_PASS="gksdud09"; 
+
+##################
+
+5. NERDTree : http://net.tutsplus.com/tutorials/other/vim-essential-plugin-nerdtree/
+
+#####
+ubuntu server
+openssh-server install
+글자 깨짐 현상 제거 : export LANG=C
+
+######################
+
+6. git commit vi 모드로 변경 하기
+시냅틱 패키지 관리자 (소프트웨어 센터) - vim 검색 -> GVim 텍스트 편집기 설치
+
+7. cpan 미러
+~/.cpan/CPAN/My....
+'urllist' => 수정 (cpan 웹 사이트 mirror 에서 주소 확인 cdnetdl 유리)
+
+##########
+rumidier: 
+http://bugs.silex.kr/gitweb/ 
+git clone ssh://git@git.silex.kr/[Project] 
