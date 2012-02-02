@@ -105,3 +105,8 @@ instead of decimal-encoded entites like `&#8212;`.
 Use the `printf ()` function.
 
 ``There is a literal backtick (`) here.``
+
+좀더 자세히
+---------
+
+http://dl.dropbox.com/u/13847585/markdown-usage.html
