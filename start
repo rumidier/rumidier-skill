@@ -103,3 +103,15 @@ openssh-server install
 rumidier: 
 http://bugs.silex.kr/gitweb/ 
 git clone ssh://git@git.silex.kr/[Project] 
+
+##########
+silex server git 사용하기
+1. rsa키 등록 하기
+2. 2012.1~ ssh는 meadow 등록
+   clone은 rumidier 만 등록
+
+ssh rumidier@bugs.silex.kr
+$ cd /srv/gitosis/repositories
+
+clone
+git clone git@git.silex.kr:docs.git
