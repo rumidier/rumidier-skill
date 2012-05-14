@@ -115,3 +115,7 @@ $ cd /srv/gitosis/repositories
 
 clone
 git clone git@git.silex.kr:docs.git
+------------------
+
+8. libmysql client -dev
+-dev 를 설치해 주지 않으면 다른 호환이 안돼 mysql에 접속을 하지 못한다
