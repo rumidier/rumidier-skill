@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <script type="text/javascript" src="../../jquery-1.8.js"></script>
+    <title>13-20</title>
+    <script>
+      $(document).ready(function () {
+      	setTimeout(function() {
+      		var value = $('select > option:selected').val();
+      		alert(value);
+
+      		$('input[type=text]').css('background', 'Red');
+
+      		var check_val = [];
+      		 check_val = $('input[type=checkbox] > checkbox:selected').val();
+      		alert(check_val);
+      	}, 5000);
+      });
+
+    </script>
+  </head>
+
+  <body>
+  	<select>
+  		<option>Apple</option>
+  		<option>Bag</option>
+  		<option>Cat</option>
+  		<option>Dog</option>
+  		<option>Elephant</option>
+  	</select>
+
+  	<input type="checkbox" value="Car" />I have a car <br />
+  	<input type="checkbox" value="Bike" /> I have a Bike <br />
+
+  	<input type="text" />
+
+  </body>
+</html>

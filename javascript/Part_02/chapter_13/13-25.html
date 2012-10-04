@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <script type="text/javascript" src="../../jquery-1.8.js"></script>
+    <title>13-25</title>
+    <script>
+      $(document).ready(function () {
+      	var array = [
+      		{ name: 'Hanbit Media', link: 'http://hanb.co.kr' },
+      		{ name: 'Naver', link: 'http://naver.com' },
+      		{ name: 'Daum', link: 'http://daum.net' },
+      		{ name: 'Paran', link: 'http://paran.com' },
+      	];
+
+      	$.each(array, function (index, item) {
+      		var output = '';
+      		output = '<a href="' + item.link + '">';
+      		output += '    <h1>' + item.name + '</h1>';
+      		output += '</a';
+
+      		document.body.innerHTML += output;
+      	});
+      });
+    </script>
+  </head>
+
+  <body>
+  </body>
+</html>

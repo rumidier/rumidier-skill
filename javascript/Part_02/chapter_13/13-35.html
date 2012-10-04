@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <script type="text/javascript" src="../../jquery-1.8.js"></script>
+    <title>13-35</title>
+    <script>
+      $(document).ready(function() {
+ /*     	var object = {};
+      	object.name = 'RintIanTta';
+      	object.gender = 'Male';
+      	object.part = 'Second Guitar';
+      	*/
+      	var object = { name: 'RintIanTta' };
+
+      	$.extend(object, {
+      		gender: 'Male',
+      		part: 'Second Guitar'
+      	});
+
+      	var output = '';
+      	$.each(object, function(key, item) {
+      		output += key + ': ' + item + '\n';
+      	});
+
+      	alert(output);
+      });
+    </script>
+  </head>
+
+  <body>
+  </body>
+</html>

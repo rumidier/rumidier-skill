@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>5-20</title>
+    <script>
+      function callFunctionTenTimes(otherFunction) {
+	for (var i = 0; i < 10; i++) {
+	  otherFunction();
+	}
+      }
+
+      function justFunction() {
+	alert('Hello World..!');
+      }
+
+      callFunctionTenTimes(justFunction);
+    </script>
+  </head>
+
+  <body>
+  </body>
+</html>
