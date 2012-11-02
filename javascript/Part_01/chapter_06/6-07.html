@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>객체와 반복문</title>
+    <script>
+    	var product = {
+	  name: 'Microsoft Visual Studio 2010 Ultimate',
+	  price: '150,000,000원',
+	  language: '한국어',
+	  supportOS: 'Win 32/64',
+	  subscription: 'ture'
+	};
+
+	var output = '';
+	for (var key in product) {
+	  output += '--' + key + ': ' +  product[key] + '\n';
+	}
+
+	alert(output);
+    </script>
+  </head>
+
+  <body>
+  </body>
+</html>

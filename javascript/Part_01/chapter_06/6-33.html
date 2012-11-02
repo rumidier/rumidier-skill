@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title> 생성자 함수 Rectangle 선언</title>
+    <script>
+    	function Rectangle(width, height) {
+	  this.width = width;
+	  this.height = height;
+	}
+
+	Rectangle.prototype.getArea = function () {
+	  return this.width * this.height;
+	}
+
+	var rectangle = new Rectangle(5, 7);
+	rectangle.width = -2;
+
+	alert('AREA: ' + rectangle.getArea());
+    </script>
+  </head>
+
+  <body>
+  </body>
+</html>

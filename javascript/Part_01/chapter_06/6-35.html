@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+    	function Rectangle(w,h) {
+	  var width = w;
+	  var height = h;
+
+	  this.getWidth = function () { return width; };
+	  this.getHeight = function () { return height; };
+
+	  this.setWidth = function (value) {
+	    if (value < 0) {
+	      throw '길이는 음수일수 없습니다.';
+	    } else {
+	      width = value;
+	    }
+	  };
+
+	  this.setHeight = function (value) {
+	    if (value < 0) {
+	      throw '길이는 음수일수 없습니다.';
+	    } else {
+	      width = value;
+	    }
+	  };
+	}
+
+	Rectangle.prototype.getArea = function () {
+		return this.getWidth() * this.getHeight();
+	};
+
+	var rectangle = new Rectangle(5, 7);
+	rectangle.setWidth(-2);
+
+	alert('AREA: ' + rectangle.getArea());
+    </script>
+  </head>
+
+  <body>
+  </body>
+</html>
