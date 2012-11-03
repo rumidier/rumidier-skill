@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <script type="text/javascript" src="../../jquery-1.8.js"></script>
+    <title></title>
+    <script>
+    	$(document).ready(function () {
+	    $('img').css('width', 250);
+
+	    setInterval(function () {
+	      $('img').first().appendTo('body');
+	    }, 2000);
+	});
+    </script>
+  </head>
+
+  <body>
+    <img src="Chrysanthemum.jpg" />
+    <img src="Desert.jpg" />
+    <img src="Hydrangeas.jpg" />
+    <img src="Jellyfish.jpg" />
+    <img src="Koala.jpg" />
+  </body>
+</html>
