@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <script type="text/javascript" src="../../jquery-1.8.js"></script>
+    <title></title>
+    <script>
+      $(document).ready(function () {
+	  $('a').click(function (event) {
+	    $(this).css('background-color', 'Blue');
+	    event.stopPropagation();
+	    event.preventDefault();
+	  });
+	  $('h1').click(function () {
+	    $(this).css('background-color', 'Red');
+	  });
+      });
+    </script>
+    <style>
+      * {
+	  margin: 5px; padding: 5px;
+	  border: 3px solid Black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>
+      <a href="http://hanb.co.kr">Hanb Media</a>
+    </h1>
+  </body>
+</html>

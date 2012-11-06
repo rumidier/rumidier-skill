@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <script type="text/javascript" src="../../jquery-1.8.js"></script>
+    <title></title>
+    <script>
+      $(document).ready(function () {
+	$('h1').live('click', function () {
+	  var length = $('h1').length;
+	  var targetHTML = $(this).html();
+	  $('#wrap').append('<h1>' + length + ' - ' + targetHTML + '</h1>');
+	});
+
+	setTimeout(function () {
+	  $('h1').die();
+	}, 5000);
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="wrap">
+      <h1>Header</h1>
+    </div>
+  </body>
+</html>

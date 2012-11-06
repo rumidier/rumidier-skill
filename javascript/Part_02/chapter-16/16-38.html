@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <script type="text/javascript" src="../../jquery-1.8.js"></script>
+    <title></title>
+    <script>
+      $(document).ready(function (even) {
+	  $('textarea').keyup(function () {
+	    var inputLength = $(this).val().length;
+	    var remain = 150 - inputLength;
+
+	    $('h1').html(remain);
+
+	    if (remain >= 0) {
+	      $('h1').css('color', 'Black');
+	    } else {
+	      $('h1').css('color', 'Red');
+	    }
+	  });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div>
+      <p>지금 내 생각을</p>
+      <h1>150</h1>
+      <textarea cols="70" rows="5"></textarea>
+    </div>
+  </body>
+</html>

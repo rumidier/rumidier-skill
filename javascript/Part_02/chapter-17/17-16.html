@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <script type="text/javascript" src="../../jquery-1.8.js"></script>
+    <title></title>
+    <script>
+      $(document).ready(function () {
+	  $('div').click(function () {
+	    $(this).animate({
+	      left: '+=60'
+	    },2000).animate( {
+	      width: '+=60'
+	    }, 2000).animate({
+	      height: '+=60'
+	    },2000);
+	  });
+      });
+    </script>
+    <style>
+      div {
+      width: 50px; height: 50px;
+       background-color: Orange;
+
+       position: relative;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div></div>
+  </body>
+</html>

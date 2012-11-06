@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <script type="text/javascript" src="../../jquery-1.8.js"></script>
+  <script type="text/javascript" src="../jquery.innerfade/js/jquery.innerfade.js"></script>
+    <title></title>
+    <script>
+      $(document).ready(function () {
+	  $('#inner_fade').innerfade({
+	    animationtype: 'fade',
+	    speed: 750,
+	    timeout: 2000,
+	    type: 'random',
+	    containerheight: '350px'
+	  });
+      });
+    </script>
+    <style>
+      * { margin: 0px; padding: 0px; }
+      ul { list-style:none; }
+      img { width: 500px; height:350px; }
+    </style>
+  </head>
+
+  <body>
+    <ul id="inner_fade">
+      <li><img src="Chrysanthemum.jpg" /></li>
+      <li><img src="Jellyfish.jpg" /></li>
+      <li><img src="Penguins.jpg" /></li>
+      <li><img src="Desert.jpg" /></li>
+      <li><img src="Koala.jpg" /></li>
+      <li><img src="Hydrangeas.jpg" /></li>
+      <li><img src="Lighthouse.jpg" /></li>
+    </ul>
+  </body>
+</html>

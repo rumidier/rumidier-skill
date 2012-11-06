@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <script type="text/javascript" src="../../jquery-1.8.js"></script>
+    <title></title>
+    <script>
+      $(document).ready(function () {
+	var canvas = document.getElementById('canvas');
+	var context = canvas.getContext('2d');
+
+	$(canvas).toggle(function (event) {
+	  var position = $(this).offset();
+
+	  context.lineTo(x, y);
+	  context.stroke();
+
+	  var x = event.pageX - position.left;
+	  var y = event.pageY - position.top;
+
+	  context.beginPath();
+	  context.moveTo(x, y);
+	}, function (event) {
+	  var position = $(this).offset();
+	  var x = event.pageX - position.left;
+	  var y = event.pageY - position.top;
+
+	  context.lineTo(x, y);
+	  context.stroke();
+	});
+      });
+    </script>
+  </head>
+
+  <body>
+    <canvas id="canvas" width="500" height="300">
+    </canvas>
+  </body>
+</html>

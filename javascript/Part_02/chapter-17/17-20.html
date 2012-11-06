@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <script type="text/javascript" src="../../jquery-1.8.js"></script>
+    <title></title>
+    <script>
+      $(document).ready(function () {
+	$('button').click(function () {
+	  var html = $(this).html();
+	  var evalText = "$('div')." + html;
+
+	  eval(evalText);
+	});
+
+	setInterval(function () {
+	  $('div').animate({
+	      left: '500'
+	    }, 1000).animate({
+	      left: '0'
+	    }, 1000);
+	  }, 2000);
+      });
+    </script>
+    <style>
+      div {
+	width: 100px; height: 100px;
+	background-color: Orange;
+
+	position: relative;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button>stop()</button>
+    <!--
+      둘다 false 이므로 큐를 비움
+      그래서 우측 이동시 왼쪽으로 바로 가서 인터벌 기다리고
+      좌측 이동시 멈춤 현상후 우측으로 이동함
+      gotoend가 펄스 이므로 하던 행동 마무리 안함
+    -->
+    <button>stop(true)</button>
+    <!--
+      누르면 멈추고 무조건 오른쪽 부터 시작
+      clearqueue 실행
+    -->
+    <button>stop(false, true)</button>
+    <!--
+      누르면 현재 하던 행동 끝으로 이동 gotoend가 하던 행동 끝으로 이동
+    -->
+    <button>stop(true, true)</button>
+    <!-- 
+    누르면 현재 하던 행동 끝으로 이동 하고 gotoend가 하던 행동 끝으로 이동 인터벌 기다림
+    -->
+    <div></div>
+  </body>
+</html>
